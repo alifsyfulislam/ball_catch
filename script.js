@@ -1,6 +1,6 @@
 let width = 300;
 let height = 250;
-let posX = 110;
+let posX = 115;//120
 let posY = height - 50;
 var aPosX = 20;
 var aPosY = 0;
@@ -11,7 +11,7 @@ var glovesDiv = document.querySelector('.gloves_div');
 var selectorDiv = document.querySelector('.selector_div');
 var glovesArea = document.querySelector('.gloves_area');
 var timer = document.querySelector('#timer');
-let counter = 20;
+let counter = 30;//20
 
 
 var totalScore = setInterval(function () {
@@ -55,7 +55,7 @@ function checkIT() {
             timer.innerText=counter;
         }
         document.getElementById('time2').innerHTML = "You Take "+ score + " Catches!";
-        document.getElementById('total_count').innerHTML = "In " + 20 + " Seconds!";
+        document.getElementById('total_count').innerHTML = "In " + 30 + " Seconds!";
     },1000)
 }
 
@@ -65,7 +65,7 @@ function ballDrop(){
         ballDiv.style.top = aPosY+"px";
         ballDiv.style.left = aPosX+"px";
         aPosY+= 5;
-        if(aPosY >= height-45){
+        if(aPosY >= height-40){//50
             var aPoX = Math.random() * width;
             aPosX = Math.round(aPoX)
             while(aPosX % 25 != 0){
