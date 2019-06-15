@@ -1,0 +1,52 @@
+// arrow
+// window.addEventListener('keydown',catchBall);
+// function catchBall(e) {
+//     e = e || window.event;
+//     if (e.keyCode == '37') {
+//         if (posX<=0) {
+//             posX=0;
+//             glovesDiv.style.left = posX+"px";
+//         }
+//         else {
+//             posX-=20;
+//             glovesDiv.style.left = posX+"px";
+//         }
+//     }
+//     else if (e.keyCode == '39') {
+//         if (posX>=260) {
+//             posX=260;
+//             glovesDiv.style.left = posX+"px";
+//         }
+//         else {
+//             posX+=20;
+//             glovesDiv.style.left = posX+"px";
+//         }
+//     }
+// }
+
+
+//click
+// document.onkeydown = catchBall;
+// var leftMove = document.querySelector('.left_move');
+// var rightMove = document.querySelector('.right_move');
+// function leftClicks(){
+//     if (posX<=0) {
+//         posX=0;
+//         glovesDiv.style.left = posX+"px";
+//     }
+//     else {
+//         posX-=20;
+//         glovesDiv.style.left = posX+"px";
+//     }
+// }
+
+// function rightClicks(){
+//     if (posX>=260) {
+//         posX=260;
+//         glovesDiv.style.left = posX+"px";
+//     }
+//     else {
+//         posX+=20;
+//         glovesDiv.style.left = posX+"px";
+//     }
+// }
