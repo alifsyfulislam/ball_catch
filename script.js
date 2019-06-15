@@ -64,8 +64,8 @@ function ballDrop(){
     ballRmv = setInterval(function () {
         ballDiv.style.top = aPosY+"px";
         ballDiv.style.left = aPosX+"px";
-        aPosY+= 7;
-        if(aPosY >= height-50){
+        aPosY+= 5;
+        if(aPosY >= height-45){
             var aPoX = Math.random() * width;
             aPosX = Math.round(aPoX)
             while(aPosX % 25 != 0){
@@ -76,7 +76,7 @@ function ballDrop(){
             }
             aPosY = 0;
         }
-    },45);
+    },15);
 }
 
 var touchAlert,mouseAlert;
@@ -97,7 +97,7 @@ function mouseDetect(e){
     }
 
     boundaryWall = Math.abs(aPosX - mouseAlert)<=0? 10 : Math.abs(aPosX - mouseAlert);
-    if ( boundaryWall<= 50 && Math.abs(aPosY - posY) <= 15){
+    if ( boundaryWall<= 45 && Math.abs(aPosY - posY) <= 10){
          var aPoX = Math.random() * width;
          while(aPosX <= 25){
             aPosX++;
@@ -128,7 +128,7 @@ function touchDetect(e){
     }
 
     boundaryWall = Math.abs(aPosX - touchAlert)<=0? 10 : Math.abs(aPosX - touchAlert);
-    if ( boundaryWall<= 45 && Math.abs(aPosY - posY) <= 20){
+    if ( boundaryWall<= 45 && Math.abs(aPosY - posY) <= 10){
          var aPoX = Math.random() * width;
         while(aPosX <= 25){
             aPosX++;
