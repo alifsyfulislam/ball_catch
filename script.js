@@ -31,7 +31,7 @@ function checkIT() {
 	ballDrop();
     interval = setInterval(function () {
         counter--;
-        if (score>= 5 && counter < 0){
+        if (score>= 10 && counter < 0){
             clearInterval(totalScore);
             clearInterval(ballRmv);
             clearInterval(interval);
@@ -41,7 +41,7 @@ function checkIT() {
             slide2.classList.add('show');
             document.getElementById('result').innerHTML = "Tremendous Performance!";
         }
-        else if(score < 5 && counter < 0){
+        else if(score < 10 && counter < 0){
             clearInterval(totalScore);
             clearInterval(ballRmv);
             clearInterval(interval);
@@ -65,7 +65,7 @@ function ballDrop(){
         ballDiv.style.top = aPosY+"px";
         ballDiv.style.left = aPosX+"px";
         aPosY+= 5;
-        if(aPosY >= height-40){//50
+        if(aPosY >= height-37){//50
             var aPoX = Math.random() * width;
             aPosX = Math.round(aPoX)
             while(aPosX % 25 != 0){
@@ -76,7 +76,7 @@ function ballDrop(){
             }
             aPosY = 0;
         }
-    },15);
+    },13);
 }
 
 var touchAlert,mouseAlert;
